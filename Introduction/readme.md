@@ -79,3 +79,6 @@
 > Webpage Reload
 
 - Reloading a page = new HTTP request → HTML, CSS, JS are all fetched again unless cached.
+
+---
+

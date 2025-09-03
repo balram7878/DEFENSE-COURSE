@@ -39,3 +39,4 @@
 - e.g., alt in image tag used by screen readers for visually impaired users.
 
 ---
+
