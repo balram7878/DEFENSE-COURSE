@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    height: 1200px;
+}
+h1{
+    position: fixed;
+    top: 0px;
+    left: 300px;
+}
+h3{
+    position: sticky;
+    top: 0px;
+    
+}
