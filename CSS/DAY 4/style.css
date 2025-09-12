@@ -1,0 +1,40 @@
+.box {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  margin: 10px; 
+}
+#first {
+  background-color: orange;
+  flex-grow: 1;
+}
+
+#second {
+  background-color: green;
+    flex-grow: 2;
+}
+
+#third {
+  background-color: skyblue;
+    flex-grow: 3;
+}
+
+#forth {
+  background-color: antiquewhite;
+    flex-grow: 4;
+}
+
+#root {
+  height: 800px;
+  /* width: 800px; */
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+
+}
+
+body{
+    background-color: black;
+}
