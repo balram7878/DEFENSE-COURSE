@@ -1,0 +1,32 @@
+.container{
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+}
+
+.first{
+    grid-row:1/4;
+}
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+.second{
+    grid-column:2/4;
+}
+
+.third{
+    grid-row:2/4;
+    grid-column: 4/5;
+}
