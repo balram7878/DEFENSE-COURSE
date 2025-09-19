@@ -1,0 +1,35 @@
+img {
+  border-radius: 10px;
+  height: 200px;
+  width: 300px;
+}
+
+@media screen and (max-width:600px) {
+    div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media screen and (min-width:600px) {
+    div{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 900px) {
+  div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
