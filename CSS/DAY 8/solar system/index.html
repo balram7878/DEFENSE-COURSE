@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        body {
+            background: radial-gradient(circle at center, #000 60%, #020202);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            position: relative;
+            width: 900px;
+            height: 900px;
+        }
+
+        /* General orbit style */
+        .ring {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .object {
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet-wrapper {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .one {
+            animation: spin 3s linear infinite;
+        }
+
+        .two {
+            animation: spin 4s linear infinite;
+        }
+
+        .three {
+            animation: spin 5s linear infinite;
+        }
+
+        .four {
+            animation: spin 6s linear infinite;
+        }
+
+        .five {
+            animation: spin 7s linear infinite;
+        }
+
+        .six {
+            animation: spin 8s linear infinite;
+        }
+
+        .seven {
+            animation: spin 9s linear infinite;
+        }
+
+        .eight {
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Sun */
+        #sun {
+            height: 120px;
+            width: 120px;
+            background: radial-gradient(circle, #ffec85, #f5b800, #e66b00);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 60px 20px rgba(255, 200, 0, 0.8);
+        }
+
+        /* Orbits */
+        #mercury-ring {
+            width: 180px;
+            height: 180px;
+        }
+
+        #venus-ring {
+            width: 260px;
+            height: 260px;
+        }
+
+        #earth-ring {
+            width: 340px;
+            height: 340px;
+        }
+
+        #mars-ring {
+            width: 420px;
+            height: 420px;
+        }
+
+        #jupiter-ring {
+            width: 520px;
+            height: 520px;
+        }
+
+        #saturn-ring {
+            width: 620px;
+            height: 620px;
+        }
+
+        #uranus-ring {
+            width: 720px;
+            height: 720px;
+        }
+
+        #neptune-ring {
+            width: 820px;
+            height: 820px;
+        }
+
+        /* Planets */
+        #mercury {
+            height: 18px;
+            width: 18px;
+            background-image: url(./assets/mercury.jpg);
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%)
+        }
+
+
+
+        #venus {
+            height: 28px;
+            width: 28px;
+            background-image: url(./assets/venus.jpg);
+
+        }
+
+        #earth {
+            height: 32px;
+            width: 32px;
+            background-image: url(./assets/earth.jpg);
+
+        }
+
+        #mars {
+            height: 24px;
+            width: 24px;
+            background-image: url(./assets/mars.jpg);
+
+        }
+
+        #jupiter {
+            height: 70px;
+            width: 70px;
+            background-image: url(./assets/jupiter.jpg);
+
+        }
+
+        #saturn {
+            height: 64px;
+            width: 64px;
+            background-image: url(./assets/saturn.jpg);
+
+        }
+
+        #uranus {
+            height: 50px;
+            width: 50px;
+            background-image: url(./assets/uranus.jpg);
+
+        }
+
+        #neptune {
+            height: 48px;
+            width: 48px;
+            background-image: url(./assets/neptune.jpg);
+
+        }
+
+        /* Belt container */
+
+
+
+
+        #astroid-belt {
+            display: flex;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+
+        }
+
+        .belt {
+            border: 3px dotted gray;
+            border-radius: 50%;
+            height: 380px;
+            width: 380px;
+            transform: rotate(10deg);
+            animation: spin 60s linear infinite;
+
+
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="sun"></div>
+
+        <div id="mercury-ring" class="ring">
+            <div class="planet-wrapper one">
+                <div id="mercury" class="object"></div>
+            </div>
+        </div>
+
+        <div id="venus-ring" class="ring">
+            <div class="planet-wrapper two">
+                <div id="venus" class="object"></div>
+            </div>
+        </div>
+
+        <div id="earth-ring" class="ring">
+            <div class="planet-wrapper three">
+                <div id="earth" class="object"></div>
+            </div>
+        </div>
+
+        <div id="mars-ring" class="ring">
+            <div class="planet-wrapper four">
+                <div id="mars" class="object"></div>
+            </div>
+        </div>
+
+        <div id="astroid-belt">
+            <div class="belt" style="display: flex; gap: 10px;">
+                <div class="belt">
+                </div>
+            </div>
+        </div>
+
+        <div id="jupiter-ring" class="ring">
+            <div class="planet-wrapper five">
+                <div id="jupiter" class="object"></div>
+            </div>
+        </div>
+
+        <div id="saturn-ring" class="ring">
+            <div class="planet-wrapper six">
+                <div id="saturn" class="object"></div>
+            </div>
+        </div>
+
+        <div id="uranus-ring" class="ring">
+            <div class="planet-wrapper seven">
+                <div id="uranus" class="object"></div>
+            </div>
+        </div>
+
+        <div id="neptune-ring" class="ring">
+            <div class="planet-wrapper eight">
+                <div id="neptune" class="object"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
