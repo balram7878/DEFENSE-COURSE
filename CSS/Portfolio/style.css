@@ -186,6 +186,157 @@ nav a:hover {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-#skills{
-    margin-bottom: 40px;
+#skills {
+  margin-bottom: 40px;
 }
+
+#ed-details {
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 5px;
+}
+
+.degree {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.college {
+  font-style: italic;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+
+.learn {
+  columns: #a0a0a0;
+}
+
+.pointer {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #ffbf00;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.liner {
+  width: 2px;
+  border: 2px solid #3a3a3a;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 6px;
+}
+
+
+
+#projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.project {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid #3a3a3a;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  padding: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card span {
+  background-color: rgba(255, 191, 0, 0.1);
+  color: #ffbf00;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  margin-right: 5px;
+}
+
+.project-view{
+  padding: 5px 10px;
+  background-color: green;
+  outline: none;
+  border: 1px solid #2a2a2a;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: 3%;
+  
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  #navigation nav {
+    /* Adjust nav for smaller screens */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
