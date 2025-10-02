@@ -62,3 +62,8 @@ let str = "Hello";
 typeof null;        // "object" (legacy bug)
 typeof undefined;   // "undefined"
 typeof NaN;         // "number"
+
+---
+
+
+**Math.floor(Math.random()*totalNumberOfOutcomes)+shift**
