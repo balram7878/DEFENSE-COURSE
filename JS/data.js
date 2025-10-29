@@ -1,117 +1,36 @@
-const products = [
-  // Electronics
-  {
-    id: 1,
-    name: "Laptop",
-    category: "Electronics",
-    price: 1200,
-    inStock: true,
-  },
-  {
-    id: 2,
-    name: "Headphones",
-    category: "Electronics",
-    price: 200,
-    inStock: true,
-  },
-  {
-    id: 3,
-    name: "Smartphone",
-    category: "Electronics",
-    price: 800,
-    inStock: false,
-  },
-  {
-    id: 4,
-    name: "Monitor",
-    category: "Electronics",
-    price: 300,
-    inStock: true,
-  },
-  {
-    id: 5,
-    name: "Keyboard",
-    category: "Electronics",
-    price: 75,
-    inStock: true,
-  },
+// const fun = async () => {
+//   const response = await fetch("https://api.github.com/users");
+//   const data = await response.json();
+//   console.log(data);
+// };
 
-  // Books
-  { id: 6, name: "The Hobbit", category: "Books", price: 25, inStock: true },
-  {
-    id: 7,
-    name: "A Brief History of Time",
-    category: "Books",
-    price: 30,
-    inStock: true,
-  },
-  { id: 8, name: "Dune", category: "Books", price: 28, inStock: false },
+// fun();
 
-  // Appliances
-  {
-    id: 9,
-    name: "Coffee Maker",
-    category: "Appliances",
-    price: 150,
-    inStock: false,
-  },
-  { id: 10, name: "Blender", category: "Appliances", price: 80, inStock: true },
-  { id: 11, name: "Toaster", category: "Appliances", price: 45, inStock: true },
-  {
-    id: 12,
-    name: "Microwave Oven",
-    category: "Appliances",
-    price: 220,
-    inStock: true,
-  },
+// const p = fetch("https://api.github.com/users");
+// p.then((res) => {
+//   // console.log(res.__proto__)
+//   res.text().then(txt=>JSON.parse(txt)).then(console.log);
+// });
 
-  // Clothing
-  { id: 13, name: "T-Shirt", category: "Clothing", price: 20, inStock: true },
-  { id: 14, name: "Jeans", category: "Clothing", price: 60, inStock: false },
-  { id: 15, name: "Jacket", category: "Clothing", price: 110, inStock: true },
+const root = document.getElementById("root");
+fetch("https://api.github.com/users").then((res) =>{
+  if(!res.ok)
+    throw new Error("data not present");
+  res.json().then((users) => {
+    users.forEach((e) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      root.append(card);
+      const profile=document.createElement("img");
+      profile.src=e.avatar_url;
+      profile.className="profile";
+      card.append(profile)
 
-  // Home Goods
-  {
-    id: 16,
-    name: "Desk Lamp",
-    category: "Home Goods",
-    price: 35,
-    inStock: true,
-  },
-  {
-    id: 17,
-    name: "Scented Candle",
-    category: "Home Goods",
-    price: 15,
-    inStock: true,
-  },
-  {
-    id: 18,
-    name: "Picture Frame",
-    category: "Home Goods",
-    price: 22,
-    inStock: false,
-  },
-
-  // Groceries
-  {
-    id: 19,
-    name: "Organic Apples",
-    category: "Groceries",
-    price: 5,
-    inStock: true,
-  },
-  {
-    id: 20,
-    name: "Artisan Bread",
-    category: "Groceries",
-    price: 8,
-    inStock: true,
-  },
-];
-
-const arr=[1,2,3,4,4,3,2,1];
-const num=new Set(arr);
-console.log(num.delete(2))
-num.clear()
-console.log(num)
+    });
+  })
+})
+.catch(err=>{
+  const h1=document.createElement("h1");
+  h1.textContent=err.message;
+  root.append(h1);
+});

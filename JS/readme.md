@@ -67,3 +67,5 @@ typeof NaN;         // "number"
 
 
 **Math.floor(Math.random()*totalNumberOfOutcomes)+shift**
+
+<!-- https://api.github.com/users -->
