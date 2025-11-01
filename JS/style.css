@@ -1,0 +1,16 @@
+.childs,#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+#root{
+    height: 100vh;
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
