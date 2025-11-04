@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            position: relative;
+        }
+
+        #root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            bottom: 40px;
+            left: 30%;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 1px solid gray;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div style="background-color: red;" id="red" class="box"></div>
+        <div style="background-color: yellow;" id="yellow" class="box"></div>
+        <div style="background-color: green;" id="green" class="box"></div>
+        <div style="background-color: orange;" id="orange" class="box"></div>
+        <div style="background-color: black;" id="black" class="box"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
