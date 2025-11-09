@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down Timer</title>
+</head>
+
+<body>
+    <h1 id="hour"></h1>
+    <h1 id="minute"></h1>
+    <h1 id="second"></h1>
+    <h1 id="ms"></h1>
+    <script>
+        const hour = document.getElementById("hour");
+        const minute = document.getElementById("minute");
+        const second = document.getElementById("second");
+        const ms = document.getElementById("ms");
+        let startTime = Date.now();
+        setInterval(() => {
+
+            let elapsedTime = Date.now() - startTime;
+            let miliSecond = elapsedTime % 1000;
+            let seconds = Math.floor(elapsedTime / 1000) % 60;
+            let minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
+            let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+            ms.textContent = miliSecond;
+            second.textContent = seconds;
+            minute.textContent = minutes;
+            hour.textContent = hours;
+            miliSecond = 0;
+
+        }, 1);
+    </script>
+</body>
+
+</html>
