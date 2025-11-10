@@ -1,0 +1,13 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "JavaScript was created by **Brendan Eich** in 1995 while working at **Netscape Communications**.  \r - Its first name was **Mocha**, then changed to **LiveScript**, and finally renamed to **JavaScript** in **December 1995**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
